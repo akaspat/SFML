@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(400, 400), "Фигуры");
 
     while (window.isOpen()){
         sf::Event event;
@@ -10,7 +10,9 @@ int main() {
                 window.close();
             }
         }
-        window.clear();
+        window.clear(sf::Color(255, 255, 255));
+
+        window.display();
     }
     return 0;
 }

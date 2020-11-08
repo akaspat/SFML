@@ -5,7 +5,9 @@ set(CMAKE_CXX_STANDARD 14)
 set(SOURCE_EXE main.cpp)
 
 set(SOURCE_LIB
-        src/Ellipse.cpp)
+        src/Shape.cpp
+        src/Ellipse.cpp
+        src/Rectangle.cpp)
 
 add_library(figure STATIC ${SOURCE_LIB})
 

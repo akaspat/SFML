@@ -41,27 +41,6 @@ void Ellipse::setSize(float a, float b) {
     }
 }
 
-void Ellipse::setColor(int r, int g, int b) {
-    r = r > 255 ? 255 : r;
-    g = g > 255 ? 255 : g;
-    b = b > 255 ? 255 : b;
-    shape_->setFillColor(sf::Color(r, g, b));
-}
-
-void Ellipse::setColor(sf::Color color) {
-    shape_->setFillColor(color);
-}
-
-void Ellipse::setPos(float x, float y) {
-    center_.x = x;
-    center_.y = y;
-
-    shape_->move(center_);
-}
-
-void Ellipse::toRender() {
-    parentWindow_->draw(*shape_);
-}
 
 Ellipse::~Ellipse() {
     delete shape_;

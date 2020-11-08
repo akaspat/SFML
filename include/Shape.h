@@ -3,11 +3,12 @@
 
 #include <SFML/Graphics/ConvexShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
+#include <memory>
 
 class Shape {
 
 protected:
-    sf::ConvexShape* shape_;
+    std::shared_ptr<sf::ConvexShape> shape_;
     sf::Vector2f center_;
     sf::RenderWindow* parentWindow_;
 public:
@@ -17,6 +18,8 @@ public:
     virtual void setColor(sf::Color);
     virtual void setPos(float, float);
     virtual void toRender();
+
+    virtual ~Shape() {};
 };
 
 

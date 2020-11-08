@@ -2,7 +2,7 @@
 
 Rectangle::Rectangle(sf::RenderWindow *w) {
     parentWindow_ = w;
-    shape_ = new sf::ConvexShape(4);
+    shape_ = std::make_shared<sf::ConvexShape>(4);
     center_.x = 0; center_.y = 0;
 }
 
@@ -18,5 +18,4 @@ void Rectangle::setSize(float w, float h) {
 }
 
 Rectangle::~Rectangle() {
-    delete shape_;
 }

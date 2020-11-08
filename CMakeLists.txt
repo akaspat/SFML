@@ -7,7 +7,8 @@ set(SOURCE_EXE main.cpp)
 set(SOURCE_LIB
         src/Shape.cpp
         src/Ellipse.cpp
-        src/Rectangle.cpp)
+        src/Rectangle.cpp
+        src/Circle.cpp)
 
 add_library(figure STATIC ${SOURCE_LIB})
 

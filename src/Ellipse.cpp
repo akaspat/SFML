@@ -1,10 +1,13 @@
 #include <cmath>
 #include "../include/Ellipse.h"
 
+Ellipse::Ellipse() {
+}
+
 Ellipse::Ellipse(sf::RenderWindow *w) {
-    parentWindow_ = w;
-    shape_ = new sf::ConvexShape();
-    center_.x = 0; center_.y = 0;
+    this->parentWindow_ = w;
+    this->shape_ = std::make_shared<sf::ConvexShape>();
+    this->center_.x = 0; this->center_.y = 0;
 }
 
 void Ellipse::setSize(float a, float b) {
@@ -43,5 +46,4 @@ void Ellipse::setSize(float a, float b) {
 
 
 Ellipse::~Ellipse() {
-    delete shape_;
 }

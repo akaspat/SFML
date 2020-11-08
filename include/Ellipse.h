@@ -6,7 +6,8 @@
 
 class Ellipse : public Shape {
 public:
-    Ellipse(sf::RenderWindow*);
+    Ellipse();
+    explicit Ellipse(sf::RenderWindow*);
     void setSize(float, float);
     ~Ellipse();
 };

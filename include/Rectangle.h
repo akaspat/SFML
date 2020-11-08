@@ -8,7 +8,8 @@ class Rectangle : public Shape{
 public:
     Rectangle(sf::RenderWindow*);
     void setSize(float, float);
-    ~Rectangle();
+    std::string shapeType() override;
+    ~Rectangle() {};
 };
 
 

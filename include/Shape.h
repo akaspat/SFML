@@ -12,8 +12,9 @@ protected:
     sf::Vector2f center_;
     sf::RenderWindow* parentWindow_;
 public:
-    virtual void setSize(float, float)=0;
+    virtual std::string shapeType()=0;
 
+    virtual void setSize() {};
     virtual void setColor(int, int, int);
     virtual void setColor(sf::Color);
     virtual void setPos(float, float);

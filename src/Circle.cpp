@@ -8,7 +8,7 @@ Circle::Circle(sf::RenderWindow *w) {
     center_.x = 0; center_.y = 0;
 }
 
-void Circle::setSize(float r, float b) {
+void Circle::setSize(float r) {
     radius = r;
     float x, y;
 
@@ -23,6 +23,8 @@ float Circle::getRadius() {
     return radius;
 }
 
-Circle::~Circle() {}
+std::string Circle::shapeType() {
+    return "Circle";
+}
 
 

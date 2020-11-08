@@ -8,9 +8,10 @@ class Circle : public Ellipse {
     float radius;
 public:
     Circle(sf::RenderWindow*);
-    void setSize(float r, float _unused=0) override;
+    void setSize(float r);
     float getRadius();
-    ~Circle();
+    std::string shapeType() override;
+    ~Circle() {};
 };
 
 #endif //SFML_CIRCLE_H

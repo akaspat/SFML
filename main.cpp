@@ -2,6 +2,8 @@
 
 #include "include/Ellipse.h"
 #include "include/Rectangle.h"
+#include "include/Triangle.h"
+
 #include "include/Circle.h"
 
 int main() {
@@ -31,9 +33,17 @@ int main() {
         c.setColor(sf::Color::Red);
         c.setPos(150, 150);
 
+        Triangle t(&window);
+        t.setSize(sf::Vector2f(70, 70),
+                  sf::Vector2f(130, 150),
+                  sf::Vector2f(90, 50));
+        t.setPos(130, 150);
+        t.setColor(sf::Color::Yellow);
+
         e.toRender();
         r.toRender();
         c.toRender();
+        t.toRender();
         window.display();
     }
     return 0;

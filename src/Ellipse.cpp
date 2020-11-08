@@ -44,6 +44,6 @@ void Ellipse::setSize(float a, float b) {
     }
 }
 
-
-Ellipse::~Ellipse() {
+std::string Ellipse::shapeType() {
+    return "Ellipse";
 }

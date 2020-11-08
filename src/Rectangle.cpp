@@ -17,5 +17,7 @@ void Rectangle::setSize(float w, float h) {
     shape_->setPoint(3, sf::Vector2f(center_.x - w/2, center_.y + h/2));
 }
 
-Rectangle::~Rectangle() {
+std::string Rectangle::shapeType() {
+    return "Rectangle";
 }
+

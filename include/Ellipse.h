@@ -9,7 +9,9 @@ public:
     Ellipse();
     explicit Ellipse(sf::RenderWindow*);
     void setSize(float, float);
-    ~Ellipse();
+    ~Ellipse() {};
+
+    std::string shapeType() override;
 };
 
 #endif //SFML_ELLIPSE_H

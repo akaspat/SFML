@@ -2,7 +2,7 @@
 
 Rectangle::Rectangle(sf::RenderWindow *w) {
     parentWindow_ = w;
-    shape_ = std::make_shared<sf::ConvexShape>(4);
+    shape_ = std::make_unique<sf::ConvexShape>(4);
     center_.x = 0; center_.y = 0;
 }
 

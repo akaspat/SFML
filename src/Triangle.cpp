@@ -2,7 +2,7 @@
 
 Triangle::Triangle(sf::RenderWindow* w) {
     this->parentWindow_ = w;
-    this->shape_ = std::make_shared<sf::ConvexShape>(3);
+    this->shape_ = std::make_unique<sf::ConvexShape>(3);
     this->center_.x = 0; this->center_.y=0;
 }
 

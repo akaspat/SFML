@@ -6,7 +6,7 @@ Ellipse::Ellipse() {
 
 Ellipse::Ellipse(sf::RenderWindow *w) {
     this->parentWindow_ = w;
-    this->shape_ = std::make_shared<sf::ConvexShape>();
+    this->shape_ = std::make_unique<sf::ConvexShape>();
     this->center_.x = 0; this->center_.y = 0;
 }
 

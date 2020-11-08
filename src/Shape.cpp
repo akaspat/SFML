@@ -21,5 +21,12 @@ void Shape::toRender() {
         return;
     }
     parentWindow_->draw(*shape_);
+    parentWindow_->display();
+}
+
+void Shape::unRender() {
+    shape_->setFillColor(sf::Color::White);
+    parentWindow_->draw(*shape_);
+    parentWindow_->display();
 }
 

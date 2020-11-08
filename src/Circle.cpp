@@ -4,7 +4,7 @@
 
 Circle::Circle(sf::RenderWindow *w) {
     parentWindow_ = w;
-    shape_ = std::make_shared<sf::ConvexShape>(36);
+    shape_ = std::make_unique<sf::ConvexShape>(36);
     center_.x = 0; center_.y = 0;
 }
 

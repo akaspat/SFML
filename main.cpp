@@ -6,6 +6,9 @@
 
 #include "include/Circle.h"
 
+#include "unistd.h"
+#include <iostream>
+
 int main() {
     sf::RenderWindow window(sf::VideoMode(400, 400), "Фигуры");
 
@@ -16,7 +19,7 @@ int main() {
                 window.close();
             }
         }
-        window.clear(sf::Color(255, 255, 255));
+        window.clear(sf::Color::White);
 
         Ellipse e(&window);
         e.setSize(50, 30);
@@ -44,7 +47,9 @@ int main() {
         r.toRender();
         c.toRender();
         t.toRender();
-        window.display();
+        sleep(5);
+        t.unRender();
+        sleep(5);
     }
     return 0;
 }

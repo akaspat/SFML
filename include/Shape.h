@@ -8,7 +8,7 @@
 class Shape {
 
 protected:
-    std::shared_ptr<sf::ConvexShape> shape_;
+    std::unique_ptr<sf::ConvexShape> shape_;
     sf::Vector2f center_;
     sf::RenderWindow* parentWindow_;
 public:
@@ -19,6 +19,7 @@ public:
     virtual void setColor(sf::Color);
     virtual void setPos(float, float);
     virtual void toRender();
+    virtual void unRender();
 
     virtual ~Shape() {};
 };

@@ -21,7 +21,7 @@ void Shape::toRender() {
         return;
     }
     parentWindow_->draw(*shape_);
-    parentWindow_->display();
+    //parentWindow_->display();
 }
 
 void Shape::unRender() {

@@ -47,9 +47,8 @@ int main() {
         r.toRender();
         c.toRender();
         t.toRender();
-        sleep(5);
-        t.unRender();
-        sleep(5);
+
+        window.display();
     }
     return 0;
 }
